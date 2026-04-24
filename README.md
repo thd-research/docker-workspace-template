@@ -127,7 +127,7 @@ The `workspace/` directory on your host machine is bind-mounted into the contain
 docker compose up --build -d
 
 # Open a new shell in a running container
-docker compose exec student-workspace bash
+docker compose exec workspace bash
 
 # Stop the container
 docker compose down
