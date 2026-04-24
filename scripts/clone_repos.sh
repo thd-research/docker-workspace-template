@@ -55,11 +55,6 @@ clone_repo() {
 # clone_repo "https://github.com/your-org/project-starter.git"
 # clone_repo "https://github.com/your-org/shared-utils.git" "main"
 
-clone_repo "https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git" "humble"
-clone_repo "https://github.com/ROBOTIS-GIT/DynamixelSDK.git" "humble"
-clone_repo "https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git" "humble"
-clone_repo "https://github.com/ROBOTIS-GIT/turtlebot3.git" "humble"
-
 # Example private repo (requires GITHUB_TOKEN exported in your shell):
 # clone_repo "https://${GITHUB_TOKEN}@github.com/your-org/private-repo.git"
 
