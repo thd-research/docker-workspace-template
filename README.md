@@ -144,4 +144,5 @@ docker rmi student-project:latest
 - [ ] Edit `scripts/clone_repos.sh` — list the repos students need
 - [ ] Update the `LABEL maintainer` line in the `Dockerfile`
 - [ ] Set a meaningful `IMAGE_NAME` in `docker-compose.yml`
+- [ ] Clone this README.md to DockerInstruction.md
 - [ ] Update this README with project-specific instructions
