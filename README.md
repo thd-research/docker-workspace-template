@@ -127,7 +127,7 @@ The `workspace/` directory on your host machine is bind-mounted into the contain
 docker compose up --build -d
 
 # Open a new shell in a running container
-docker compose exec student-workspace bash
+docker compose exec workspace bash
 
 # Stop the container
 docker compose down
@@ -144,4 +144,5 @@ docker rmi student-project:latest
 - [ ] Edit `scripts/clone_repos.sh` — list the repos students need
 - [ ] Update the `LABEL maintainer` line in the `Dockerfile`
 - [ ] Set a meaningful `IMAGE_NAME` in `docker-compose.yml`
+- [ ] Clone this README.md to DockerInstruction.md
 - [ ] Update this README with project-specific instructions
