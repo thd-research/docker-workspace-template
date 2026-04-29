@@ -23,11 +23,16 @@ services:
     image: student-project:latest
     container_name: student-workspace
 
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_QPA_PLATFORM=xcb
+
     # ── Volume mount ───────────────────────────────────────────────────────────
     # ./workspace on your machine ↔ /workspace inside the container.
     # Files you create/edit locally are immediately visible inside, and vice versa.
     volumes:
       - ./workspace:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
       # - ~/.ssh:/root/.ssh:ro   # mounts your host SSH keys as read-only
 
     # ── Keep the container alive ───────────────────────────────────────────────
