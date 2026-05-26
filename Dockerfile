@@ -32,6 +32,18 @@ COPY scripts/clone_repos.sh /usr/local/bin/clone_repos.sh
 COPY scripts/entrypoint.sh  /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/clone_repos.sh /usr/local/bin/entrypoint.sh
 
+
+# ── Python dependencies (optional) ─────────────────────────────────────────────
+# COPY requirements.txt /tmp/requirements.txt
+# RUN pip install -r /tmp/requirements.txt && rm /tmp/requirements.txt
+
+# ── Temporary: Add RUN command to install system packages before moving them to install_system.sh ────────
+# For example:
+
+# RUN apt update && apt install -y \
+#     gedit \
+#     git
+
 # ── Entrypoint: clone repos into the live volume, then hand off to CMD ────────
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["/bin/bash"]

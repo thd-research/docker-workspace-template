@@ -24,13 +24,13 @@ services:
     container_name: student-workspace
     
     ## Environment variables ─────────────────────────────────────────────────────
-    # Create .env file on the same level as this docker-compose.yml to set environment variables.
-    # Then uncomment the line below to load them into the container at runtime.
-    # env_file: ".env"
-
     environment:
+      - DB_PASS=${DB_PASSWORD}  # Pulls directly from your local .env file
       - DISPLAY=${DISPLAY}
       - QT_QPA_PLATFORM=xcb
+      - ROS_DOMAIN_ID=0
+      - ROS_NAMESPACE=robotics_lab
+      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
     # ── Volume mount ───────────────────────────────────────────────────────────
     # ./workspace on your machine ↔ /workspace inside the container.

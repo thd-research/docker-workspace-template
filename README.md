@@ -42,6 +42,7 @@ source scripts/install_docker.sh
 
 | File | What to edit |
 |------|-------------|
+| `docker-compose.yml` | Update `image:` to your application name (e.g., `my-app:latest`) and update `container_name:` to your container name (e.g., `my-app-workspace`) |
 | `scripts/install_system.sh` | Add apt packages, pip packages, or other tools |
 | `scripts/clone_repos.sh` | Add GitHub repos to clone into the workspace |
 
@@ -143,7 +144,7 @@ docker compose exec workspace bash
 # Stop the container
 docker compose down
 
-# Remove the image and start fresh
+# Remove the image, change student-project to your "my-app" image name
 docker rmi student-project:latest
 ```
 
