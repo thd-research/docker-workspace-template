@@ -7,3 +7,10 @@ log/
 __pycache__/
 *.pyc
 *.pyo
+
+# Ignore virtual environment folders
+venv/
+env/
+
+# Ignore dotenv file containing environment variables
+.env
