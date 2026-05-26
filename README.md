@@ -25,11 +25,17 @@ A ready-to-use Docker workspace for student projects. Clone this repo, configure
 ### Prerequisites
 - [Docker](https://docs.docker.com/get-docker/) installed and running (Docker Compose is included)
 
-### 1 — Clone this template
+### 1 — Clone this template and install Docker
 
 ```bash
 git clone https://github.com/your-org/your-template.git my-project
 cd my-project
+```
+
+Install Docker if Docker doesn't already exist on your PC.
+
+```bash
+source scripts/install_docker.sh
 ```
 
 ### 2 — Configure your workspace
