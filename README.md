@@ -41,8 +41,13 @@ cd my-project
 
 ### 3 — Build & run
 
+On Ubuntu, to allow your Docker to access the GUI
+```
+xhost +local:docker || true
+```
+
 ```bash
-# Build the container with packages installation and cloning repositories
+# Build the container with package installation and cloning repositories
 docker compose up --build -d
 
 # open a shell inside the running container:
