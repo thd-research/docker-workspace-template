@@ -25,12 +25,8 @@ services:
     
     ## Environment variables ─────────────────────────────────────────────────────
     environment:
-      - DB_PASS=${DB_PASSWORD}  # Pulls directly from your local .env file
       - DISPLAY=${DISPLAY}
       - QT_QPA_PLATFORM=xcb
-      - ROS_DOMAIN_ID=0
-      - ROS_NAMESPACE=robotics_lab
-      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
     # ── Volume mount ───────────────────────────────────────────────────────────
     # ./workspace on your machine ↔ /workspace inside the container.
